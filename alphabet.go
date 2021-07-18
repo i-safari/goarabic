@@ -75,13 +75,6 @@ var (
 		Medium:    '\ufe92',
 		Final:     '\ufe90'}
 
-	PEH = Harf{ // پ
-		Unicode:   '\u067e',
-		Isolated:  '\ufb56',
-		Beggining: '\ufb58',
-		Medium:    '\ufb59',
-		Final:     '\ufb57'}
-
 	TEH = Harf{ // ت
 		Unicode:   '\u062A',
 		Isolated:  '\ufe95',
@@ -109,13 +102,6 @@ var (
 		Beggining: '\ufe9f',
 		Medium:    '\ufea0',
 		Final:     '\ufe9e'}
-
-	TCHEH = Harf{ // چ
-		Unicode:   '\u0686',
-		Isolated:  '\ufb7a',
-		Beggining: '\ufb7c',
-		Medium:    '\ufb7d',
-		Final:     '\ufb7b'}
 
 	HAH = Harf{ // ح
 		Unicode:   '\u062d',
@@ -151,14 +137,6 @@ var (
 		Beggining: '\u0631',
 		Medium:    '\ufeae',
 		Final:     '\ufeae'}
-
-	JEH = Harf{
-		Unicode:   '\u0698',
-		Isolated:  '\ufb8a',
-		Beggining: '\u0698',
-		Medium:    '\ufb8b',
-		Final:     '\ufb8b',
-	}
 
 	ZAIN = Harf{ // ز
 		Unicode:   '\u0632',
@@ -244,21 +222,6 @@ var (
 		Medium:    '\ufedc',
 		Final:     '\ufeda'}
 
-	KEHEH = Harf{ // ک
-		Unicode:   '\u06a9',
-		Isolated:  '\ufb8e',
-		Beggining: '\ufb90',
-		Medium:    '\ufb91',
-		Final:     '\ufb8f',
-	}
-
-	GAF = Harf{ // گ
-		Unicode:   '\u06af',
-		Isolated:  '\ufb92',
-		Beggining: '\ufb94',
-		Medium:    '\ufb95',
-		Final:     '\ufb93'}
-
 	LAM = Harf{ // ل
 		Unicode:   '\u0644',
 		Isolated:  '\ufedd',
@@ -294,14 +257,7 @@ var (
 		Medium:    '\ufeee',
 		Final:     '\ufeee'}
 
-	YEH = Harf{ // ی
-		Unicode:   '\u06cc',
-		Isolated:  '\ufbfc',
-		Beggining: '\ufbfe',
-		Medium:    '\ufbff',
-		Final:     '\ufbfd'}
-
-	ARABICYEH = Harf{ // ي
+	YEH = Harf{ // ي
 		Unicode:   '\u064a',
 		Isolated:  '\ufef1',
 		Beggining: '\ufef3',
@@ -335,6 +291,48 @@ var (
 		Beggining: '\ufef7',
 		Medium:    '\ufef8',
 		Final:     '\ufef8'}
+
+	FA_KAF = Harf{ // ک
+		Unicode:   '\u06a9',
+		Isolated:  '\ufb8e',
+		Beggining: '\ufb90',
+		Medium:    '\ufb91',
+		Final:     '\ufb8f'}
+
+	FA_GAF = Harf{ // گ
+		Unicode:   '\u06af',
+		Isolated:  '\ufb92',
+		Beggining: '\ufb94',
+		Medium:    '\ufb95',
+		Final:     '\ufb93'}
+
+	FA_PEH = Harf{ // پ
+		Unicode:   '\u067e',
+		Isolated:  '\ufb56',
+		Beggining: '\ufb58',
+		Medium:    '\ufb59',
+		Final:     '\ufb57'}
+
+	FA_CHE = Harf{ // چ
+		Unicode:   '\u0686',
+		Isolated:  '\ufb7a',
+		Beggining: '\ufb7c',
+		Medium:    '\ufb7d',
+		Final:     '\ufb7b'}
+
+	FA_ZHE = Harf{ // ژ
+		Unicode:   '\u0698',
+		Isolated:  '\ufb8a',
+		Beggining: '\u0698',
+		Medium:    '\ufb8b',
+		Final:     '\ufb8b'}
+
+	FA_YEH = Harf{ // ی
+		Unicode:   '\u06cc',
+		Isolated:  '\ufbfc',
+		Beggining: '\ufbfe',
+		Medium:    '\ufbff',
+		Final:     '\ufbfd'}
 )
 
 var alphabet = []Harf{
@@ -346,18 +344,15 @@ var alphabet = []Harf{
 	ALEF_HAMZA_BELOW,
 	YEH_HAMZA_ABOVE,
 	BEH,
-	PEH,
 	TEH,
 	TEH_MARBUTA,
 	THEH,
 	JEEM,
-	TCHEH,
 	HAH,
 	KHAH,
 	DAL,
 	THAL,
 	REH,
-	JEH,
 	ZAIN,
 	SEEN,
 	SHEEN,
@@ -370,19 +365,23 @@ var alphabet = []Harf{
 	FEH,
 	QAF,
 	KAF,
-	KEHEH,
-	GAF,
 	LAM,
 	MEEM,
 	NOON,
 	HEH,
 	WAW,
 	YEH,
-	ARABICYEH,
 	ALEF_MAKSURA,
 	TATWEEL,
 	LAM_ALEF,
 	LAM_ALEF_HAMZA_ABOVE,
+
+	FA_KAF,
+	FA_GAF,
+	FA_PEH,
+	FA_CHE,
+	FA_ZHE,
+	FA_YEH,
 }
 
 // use map for faster lookups.
@@ -408,5 +407,6 @@ var beggining_after = map[Harf]bool{
 	THAL:             true,
 	REH:              true,
 	ZAIN:             true,
+	FA_ZHE:           true,
 	WAW:              true,
 	ALEF_MAKSURA:     true}
