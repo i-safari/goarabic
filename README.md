@@ -60,3 +60,8 @@ Contributions are greatly appreciated. Please fork this repository, make your ch
 This a [SemVer](http://semver.org/)sioned package.
 ## License
 MIT License.
+
+##refrences:
+[https://en.wikipedia.org/wiki/Arabic_script_in_Unicode](https://en.wikipedia.org/wiki/Arabic_script_in_Unicode)
+[https://en.wikipedia.org/wiki/Persian_alphabet](https://en.wikipedia.org/wiki/Persian_alphabet)
+[https://www.compart.com/en/unicode/U+06A9](https://www.compart.com/en/unicode/U+06A9)
