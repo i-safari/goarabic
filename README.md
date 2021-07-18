@@ -37,7 +37,7 @@ And maybe more...
 
 ### Importing
 ```go
-go get github.com/01walid/goarabic
+go get github.com/i-safari/goarabic
 ```
 ##### Example Usage
 ```go
