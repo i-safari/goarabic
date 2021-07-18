@@ -1,6 +1,3 @@
-
-## in this fork i'll try to add persian chars as well as arabics, wish me luck :'(
-
 # GoArabic
 [![Build Status](https://travis-ci.org/01walid/goarabic.svg)](https://travis-ci.org/01walid/goarabic)  [![GoDoc](https://godoc.org/github.com/01walid/goarabic?status.svg)](https://godoc.org/github.com/01walid/goarabic)
 
